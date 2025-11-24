@@ -724,9 +724,23 @@ h3 {
 ========================= */
 .process-grid {
     display: grid;
+    grid-template-columns: repeat(3, 1fr); /* immer 3 Spalten auf Desktop */
     gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     margin-top: 3rem;
+}
+
+/* Unter 900px → 2 Spalten */
+@media (max-width: 900px) {
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Unter 600px → 1 Spalte */
+@media (max-width: 600px) {
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .process-card {
