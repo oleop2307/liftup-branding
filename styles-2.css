@@ -765,6 +765,11 @@ h3 {
     box-shadow: 0 15px 35px rgba(0, 0, 0, .35);
 }
 
+.process-icon i {
+    font-size: 1.7rem;
+    color: #0b0f19; /* dunkler text, perfekt für helles icon-bg */
+}
+
 .process-icon {
     width: 60px;
     height: 60px;
