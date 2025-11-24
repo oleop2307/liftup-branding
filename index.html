@@ -419,7 +419,15 @@
                     </p>
                     <p class="friendly-signature">Wir freuen uns auf eure Anfrage<br>das Team von LiftUp Branding</p>
                 </div>
-                <form class="contact-form" action="#" method="post">
+                <form class="contact-form" name="contact" method="POST" data-netlify="true"
+                    netlify-honeypot="bot-field">
+
+                    <!-- Netlify Hidden-Felder -->
+                    <input type="hidden" name="form-name" value="contact">
+                    <p style="display:none;">
+                        <label>Don’t fill this out: <input name="bot-field"></label>
+                    </p>
+
                     <div class="form-group">
                         <input type="text" id="name" name="name" placeholder=" " required />
                         <label for="name">Name / Unternehmen</label>
@@ -435,14 +443,16 @@
                         <label for="message">Nachricht mit Website-URL & kurze Beschreibung</label>
                     </div>
 
-                    <button class="submit-button" type="submit" disabled title="Backend folgt">
+                    <button class="submit-button" type="submit">
                         Anfrage senden
                     </button>
-                    <!-- Nachricht nach dem Absenden -->
-                    <p class="form-note">Hinweis: Aktuell noch ohne Backend – Demo-Version der Seite.</p>
-                    <p class="thank-you-message" id="thankYou">Danke für eure Nachricht! Wir melden uns bald bei euch
+
+                    <p class="form-note">
+                        Hinweis: Das Formular wird über Netlify Forms verarbeitet.
                     </p>
+
                 </form>
+
             </div>
         </section>
     </main>
