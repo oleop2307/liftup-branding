@@ -351,6 +351,7 @@ h3 {
     /* Hintergrundbild */
     position: relative;
     background: url("img/hintergrund-startseite.jpg") center/cover no-repeat;
+
 }
 
 /* Dunkles Overlay über dem Bild */
