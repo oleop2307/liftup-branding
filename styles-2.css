@@ -350,6 +350,7 @@ h3 {
 
     /* Hintergrundbild */
     position: relative;
+    background-blend-mode: overlay;
     background: url("img/hintergrund-startseite.jpg") center/cover no-repeat;
 
 }
