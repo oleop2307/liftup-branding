@@ -11,6 +11,7 @@
     --ring: rgba(16, 185, 129, .35);
     --glow: rgba(16, 185, 129, .25);
 }
+
 /*
 @media (prefers-color-scheme: light) {
     :root {
@@ -724,20 +725,26 @@ h3 {
 ========================= */
 .process-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* immer 3 Spalten auf Desktop */
     gap: 2rem;
     margin-top: 3rem;
 }
 
-/* Unter 900px → 2 Spalten */
-@media (max-width: 900px) {
+/* Desktop: 3 Spalten */
+@media (min-width: 1024px) {
     .process-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
 
-/* Unter 600px → 1 Spalte */
-@media (max-width: 600px) {
+/* Tablet: 2 Spalten */
+@media (min-width: 640px) and (max-width: 1023px) {
+    .process-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Handy: 1 Spalte */
+@media (max-width: 639px) {
     .process-grid {
         grid-template-columns: 1fr;
     }
