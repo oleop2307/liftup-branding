@@ -107,6 +107,7 @@ a:hover {
 /* Curved Section Edges */
 .hero.section.gradient-1 {
     border-radius: 0 0 64px 64px;
+    background: none;
 }
 
 .section.gradient-2 {
